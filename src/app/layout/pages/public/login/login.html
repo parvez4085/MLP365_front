@@ -1,0 +1,67 @@
+<div class="modal fade show d-block" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 850px;">
+    <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+      <div class="row g-0">
+
+        <!-- Left Side - Image -->
+        <div class="col-md-6 d-none d-md-block"
+          style="background: url('https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?cs=srgb&dl=pexels-vireshstudio-1444442.jpg&fm=jpg') center/cover no-repeat; min-height: 450px;">
+        </div>
+
+        <!-- Right Side - Gradient Form -->
+        <div class="col-md-6 d-flex align-items-center justify-content-center"
+          style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem;">
+          
+          <div class="w-100" style="max-width: 320px; background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); border-radius: 16px; padding: 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+
+            <!-- Close Button -->
+            <div class="text-end mb-3">
+              <i class="fa-solid fa-xmark fs-5 text-white-75" role="button" (click)="onCancel()"></i>
+            </div>
+
+            <!-- Heading -->
+            <h4 class="fw-bold text-white mb-3 text-center">Sign In</h4>
+
+            <!-- Username -->
+            <div class="mb-3">
+              <div class="input-group rounded-pill overflow-hidden shadow-sm">
+                <span class="input-group-text bg-white border-0" style="width: 2.5rem;">
+                  <i class="bi bi-person text-primary"></i>
+                </span>
+                <input type="text" [(ngModel)]="username" name="username"
+                  class="form-control border-0" placeholder="Enter username" required>
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+              <div class="input-group rounded-pill overflow-hidden shadow-sm position-relative">
+                <span class="input-group-text bg-white border-0" style="width: 2.5rem;">
+                  <i class="bi bi-lock text-primary"></i>
+                </span>
+                <input #passInput type="password" [(ngModel)]="password" name="password"
+                  class="form-control border-0" placeholder="Enter password" required>
+                <button type="button"
+                  class="btn btn-link position-absolute end-0 top-50 translate-middle-y me-3 p-0 text-primary"
+                  (click)="passInput.type = passInput.type === 'password' ? 'text' : 'password'">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Forgot Password -->
+            <div class="mb-3 text-end">
+              <a href="#" class="small text-white-50 text-decoration-none">Forgot password?</a>
+            </div>
+
+            <!-- Sign In Button -->
+            <button type="submit" class="btn btn-light w-100 rounded-pill py-2 fw-semibold shadow-sm">
+              Sign In
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

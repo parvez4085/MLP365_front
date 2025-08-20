@@ -1,0 +1,47 @@
+<div class="sidebar border-end" [class.collapsed]="isCollapsed">
+  <div class="d-flex flex-column h-100">
+
+    <!-- Toggle Header -->
+    <div class="d-flex align-items-center justify-content-between p-2 border-bottom">
+      <span *ngIf="!isCollapsed" class="fw-bold">Menu</span>
+      <button class="btn btn-sm btn-light rounded-circle shadow-sm" (click)="toggleSidebar()" title="Toggle Menu">
+        <i [ngClass]="isCollapsed ? 'fas fa-chevron-right' : 'fas fa-chevron-left'"></i>
+      </button>
+    </div>
+
+    <!-- Menu Items -->
+    <ul class="list-unstyled flex-grow-1 mb-0 mt-2">
+      <li *ngFor="let item of menuItems" class="position-relative">
+
+        <!-- Menu Item -->
+        <div class="d-flex align-items-center px-3 py-2 menu-item"
+             (click)="item.children ? toggleSubmenu(item) : null"
+             [title]="isCollapsed ? item.label : ''"
+             role="button">
+
+          <!-- Icon -->
+          <i [ngClass]="[item.icon, 'me-2']" style="width:20px; text-align:center;"></i>
+
+          <!-- Label -->
+          <span *ngIf="!isCollapsed" class="flex-grow-1">{{ item.label }}</span>
+
+          <!-- Arrow -->
+          <i *ngIf="item.children && !isCollapsed"
+             [ngClass]="item.isExpanded ? 'bi bi-chevron-down ms-auto' : 'bi bi-chevron-right ms-auto'">
+          </i>
+        </div>
+
+        <!-- Submenu -->
+        <ul *ngIf="item.children && item.isExpanded"
+            class="list-unstyled shadow-sm submenu"
+            [ngClass]="{'submenu-collapsed': isCollapsed, 'submenu-expanded': !isCollapsed}">
+          <li *ngFor="let child of item.children; let i = index">
+            <a [routerLink]="child.route" class="d-block py-2 px-3 text-decoration-none submenu-link">
+              <span class="submenu-index me-2">{{ i + 1 }}.</span> {{ child.label }}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

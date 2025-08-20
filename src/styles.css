@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+/* src/styles.css (global) */
+html, body, app-root, .app-root {
+  height: 100%;
+  margin: 0;
+}
+/* ensure full-height layout works */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* app-root should fill viewport */
+app-root, .app-root {
+  display: block;
+  height: 100%;
+  min-height: 100vh;
+}

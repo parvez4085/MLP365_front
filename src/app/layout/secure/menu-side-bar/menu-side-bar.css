@@ -1,0 +1,78 @@
+/* Submenu text colors based on theme */
+[data-bs-theme="dark"] .submenu-link {
+  color: #fff !important;
+}
+[data-bs-theme="light"] .submenu-link {
+  color: #000 !important;
+}
+
+/* Submenu index color */
+[data-bs-theme="dark"] .submenu-index {
+  color: #ccc;
+}
+[data-bs-theme="light"] .submenu-index {
+  color: #6c757d;
+}
+
+/* Background colors based on theme */
+[data-bs-theme="dark"] .submenu {
+  background-color: #222 !important;
+}
+[data-bs-theme="light"] .submenu {
+  background-color: #f8f9fa !important;
+}
+
+/* Sidebar base */
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  transition: width 0.3s ease;
+}
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* Menu items (theme aware) */
+[data-bs-theme="dark"] .menu-item {
+  color: #fff;
+}
+[data-bs-theme="light"] .menu-item {
+  color: #000;
+}
+[data-bs-theme="dark"] .menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+[data-bs-theme="light"] .menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Submenu positioning */
+.submenu {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.submenu-expanded {
+  position: relative;
+  left: 0;
+}
+.submenu-collapsed {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  min-width: 220px;
+  z-index: 1000;
+}
+
+/* Submenu hover colors */
+[data-bs-theme="dark"] .submenu-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+[data-bs-theme="light"] .submenu-link:hover {
+  background-color: #f0f0f0;
+}
+
+/* Remove bullets */
+.menu, .submenu {
+  list-style: none;
+  padding-left: 0;
+}

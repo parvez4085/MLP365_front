@@ -1,0 +1,73 @@
+<section class="content">
+  <section class="card border-0 shadow-0">
+    <section class="card-body p-0">
+
+      <!-- Hero Section -->
+ <section class="position-relative text-center text-white d-flex align-items-center justify-content-center"
+  style="min-height: 90vh; background: linear-gradient(rgba(40, 0, 90, 0.65), rgba(180, 0, 90, 0.65)), url('https://varniya.com/cdn/shop/articles/Indian_Wedding_Traditions_Rituals_and_Etiquette_for_Brides_Grooms_and_Guests_97b1e009-09d3-48ee-b636-0da63a28c9a0.png?v=1746710671') center/cover no-repeat;">
+  <div class="container position-relative">
+    <h1 class="fw-bold display-3 mb-3 animate__animated animate__fadeInDown">
+      Your Dream Wedding
+      <span class="d-block fw-light text-gradient">Services Platform</span>
+    </h1>
+    <p class="lead mb-4 animate__animated animate__fadeInUp">
+      Discover all the best wedding services in one place — from venues to transportation,
+      decorations to catering. We help make your special day truly unforgettable.
+    </p>
+    <a href="#" class="btn btn-lg px-5 py-3 shadow-lg fw-bold"
+      style="background: linear-gradient(45deg, #ff6b9a, #7b2bff); border: none; border-radius: 50px;">
+      Explore Services
+    </a>
+  </div>
+</section>
+
+
+      <!-- Services Section -->
+      <section class="py-5 bg-light">
+        <div class="container text-center mb-5">
+          <h2 class="fw-bold display-5 text-dark">Our Premium Services</h2>
+          <p class="text-muted fs-5">
+            Complete wedding solutions tailored to your dreams
+          </p>
+        </div>
+        <div class="container">
+          <div class="row g-4">
+            <div *ngFor="let service of services; let i = index" class="col-md-3 col-sm-6">
+              <div class="card h-100 text-center border-0 shadow-sm p-4 rounded-4 service-card"
+                style="transition: transform 0.3s, box-shadow 0.3s;">
+                <div class="icon-box mb-3 d-flex align-items-center justify-content-center rounded-circle"
+                  style="width: 80px; height: 80px; margin: 0 auto; background: linear-gradient(135deg,#7b2bff,#ff6b9a); color: #fff; font-size: 2rem;">
+                  <span>{{service.icon}}</span>
+                </div>
+                <h5 class="fw-bold mt-3">{{service.title}}</h5>
+                <p class="text-muted">{{service.desc}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="py-5 text-white"
+        style="background: linear-gradient(90deg,#7b2bff,#ff6b9a); position: relative;">
+        <div class="container text-center">
+          <h2 class="fw-bold display-5 mb-3">Ready to Plan Your Dream Wedding?</h2>
+          <p class="mb-4 fs-5">
+            Join thousands of happy couples who found their perfect wedding services with us.
+          </p>
+          <a href="#" class="btn btn-light btn-lg px-5 py-3 fw-bold shadow rounded-pill text-primary">
+            Get Started Today
+          </a>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- Login Component -->
+    <div *ngIf="showLogin">
+      <app-login></app-login>
+    </div>
+  </section>
+</section>
+
+

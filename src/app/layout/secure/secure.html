@@ -1,0 +1,17 @@
+<div class="app-container">
+  <!-- Header -->
+  <app-header class="header"></app-header>
+
+  <div class="main-layout">
+    <!-- Fixed Sidebar -->
+      <app-menu-side-bar></app-menu-side-bar>
+      
+    <!-- Scrollable Main Content -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <app-footer class="footer"></app-footer>
+</div>

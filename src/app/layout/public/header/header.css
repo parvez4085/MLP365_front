@@ -1,0 +1,28 @@
+.top-contact {
+  background-color: #6b21a8; /* halka gray bg */
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e5e5;
+color: #ffffff;
+}
+
+.top-contact .contact-label {
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.top-contact .contact-link {
+  color: #333;
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color 0.3s ease;
+}
+
+.top-contact .contact-link:hover {
+  color: #ec4899; /* pink hover */
+}
+
+.top-contact .divider {
+  margin: 0 5px;
+  color: #666;
+}
